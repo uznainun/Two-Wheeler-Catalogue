@@ -1,0 +1,22 @@
+.first_line_content_holder, .second_line_content_holder {
+    width: 1200px;
+}
+
+
+/*dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+
+.level_1_footer_holder, .level_2_footer_holder, .level_3_footer_holder {
+    width: 1200px;
+}
+
+.level_1_footer_holder .text_line {
+    font: bold 23px caviar_bold;
+}
+
+.container {
+    width: 220px;
+}
+
+.social {
+    width: 280px;
+}

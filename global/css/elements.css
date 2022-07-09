@@ -1,0 +1,467 @@
+﻿
+.gview {
+    margin: auto;
+    border:1px solid #eee;
+    margin-bottom:30px;
+}
+
+    .gview td, .gview tr, .gview th {
+        border: none;
+    }
+        .gview tr td:first-of-type {
+            padding-left:20px
+        }
+    .gview  th {
+        padding-right:20px;
+padding-top:10px;
+    padding-bottom:10px;
+    
+        text-align: left;
+        font: bold 14px sans-serif;
+        background: dodgerblue;
+        text-transform: capitalize;
+    }
+
+ .gview th td {
+    color: white;
+}
+
+ .gview tr:nth-of-type(1) * {
+    color: white;
+}
+
+ .gview  td {
+    padding-right: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: #666;
+    font: bold 13px sans-serif;
+}
+   
+ .gview  tr:nth-of-type(odd) td {
+    background-color: #fcfcfc;
+}
+
+ .gview  tr:nth-of-type(even) td {
+    background: #eee;
+}
+
+ .gview tr:hover td {
+    background-color: tomato;
+    cursor:default;
+    color: white;
+}
+ 
+    .gview  td a {
+        text-decoration:none;
+        color:limegreen;
+        padding: 5px 19px;
+        
+    }
+    .gview td a:hover {
+    background-color:#5f5f5f;
+    color:white;
+    
+    }
+
+    .gview tr:hover a {
+    color:white;
+    }
+
+
+ 
+ /*.gview  tr:last-of-type a {
+    color: red;
+}*/
+
+ /*.gview  tr:last-of-type span {
+    color: green;
+}*/
+
+ /*.gview tr:last-of-type:hover td {
+    background: pink;
+}*/
+
+ /*.gview  tr:last-of-type td {
+    padding: 5px;
+}*/
+
+ /* grid view without select */
+ /*dddddddddddddddddddddddddddd*/
+ 
+.gview_static {
+    margin: auto;
+    border:1px solid #eee;
+    margin-bottom:30px;
+}
+
+    .gview_static td, .gview_static tr, .gview_static th {
+        border: none;
+    }
+        .gview_static tr td:first-of-type {
+            padding-left:20px
+        }
+
+    .gview_static  th {
+        padding-right:20px;
+padding-top:10px;
+    padding-bottom:10px;
+        text-align: left;
+        font: bold 14px sans-serif;
+        background: dodgerblue;
+        text-transform: capitalize;
+    }
+.gview_static th:first-of-type {
+    padding-left:20px;
+}
+
+ .gview_static th td {
+    color: white;
+}
+
+ .gview_static tr:nth-of-type(1) * {
+    color: white;
+}
+
+ .gview_static  td {
+    padding-right: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: #666;
+    font: bold 13px sans-serif;
+}
+   
+ .gview_static  tr:nth-of-type(odd) td {
+    background-color: #fcfcfc;
+}
+
+ .gview_static  tr:nth-of-type(even) td {
+    background: #eee;
+}
+
+ .gview_static tr:hover td {
+    background-color: tomato;
+    cursor:default;
+    color: white;
+}
+ 
+    .gview_static  td a {
+        text-decoration:none;
+        color:limegreen;
+        padding: 5px 19px;
+        
+    }
+    .gview_static td a:hover {
+    background-color:#5f5f5f;
+    color:white;
+    
+    }
+
+    .gview_static tr:hover a {
+    color:white;
+    }
+
+
+ 
+
+
+    .gview_static tr td table{
+        margin:auto;
+    }
+    
+    .gview_static tr td table span{
+        background-color:#999;
+        color:white!important;
+        padding: 5px 10px;
+
+    }
+
+    .gview_static tr td table a {
+        color:red!important;
+    }
+
+
+ 
+ /*dddddddddddddddddddddddddddddddddddddddddddddd*/
+.gview_ws {
+    margin: auto;
+    border:1px solid #eee;
+    margin-bottom:30px;
+}
+
+    .gview_ws td, .gview_ws tr, .gview_ws th {
+        border: none;
+    }
+        .gview_ws tr td:first-of-type {
+            padding-left:20px
+        }
+    .gview_ws  th {
+        padding-right:20px;
+padding-top:10px;
+    padding-bottom:10px;
+    
+        text-align: left;
+        font: bold 14px sans-serif;
+        background: dodgerblue;
+        text-transform: capitalize;
+    }
+        .gview_ws th:first-of-type {
+        padding-left:20px;
+        }
+
+ .gview_ws th td {
+    color: white;
+}
+
+ .gview_ws tr:nth-of-type(1) * {
+    color: white;
+}
+
+ .gview_ws  td {
+    padding-right: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: #666;
+    font: bold 13px sans-serif;
+}
+   
+ .gview_ws  tr:nth-of-type(odd) td {
+    background-color: #fcfcfc;
+}
+
+ .gview_ws  tr:nth-of-type(even) td {
+    background: #eee;
+}
+
+ .gview_ws tr:hover td {
+    cursor:default;
+}
+ 
+    .gview_ws  td a {
+        text-decoration:none;
+        color:limegreen;
+        padding: 5px 19px;
+        
+    }
+    .gview_ws td a:hover {
+    background-color:#5f5f5f;
+    color:white;
+    
+    }
+
+    .gview_ws tr:hover a {
+    color:white;
+    }
+
+
+
+ /*detail view*/
+ 
+ .dview {
+     border:1px solid #eee;
+    margin-bottom:30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+.dview  tr,.dview td{
+    border:none;
+
+}
+    .dview td {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:70px;
+    }
+        .dview td:first-of-type {
+        padding-left:40px;
+        }
+      
+ .dview  tr:nth-of-type(odd) td {
+    background-color: #fcfcfc;
+}
+
+ .dview  tr:nth-of-type(even) td {
+    background: #eee;
+}
+      
+    .dview tr td:nth-of-type(1) {
+    
+    font:bold 14px sans-serif; 
+    color:#666;
+    text-transform:capitalize;
+    
+       }
+    .dview tr td:nth-of-type(2) {
+font:bold 12px sans-serif; 
+    color:#666;
+    }
+    /*button */
+.bt {
+       font: bold 19px agency fb;
+    color: #FFFFFF;
+    background-color: #3CC05B;
+    border: 3px solid #3CC05B;
+    border-radius: 4px;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    padding: 5px 20px;
+    text-transform:lowercase;
+}
+    .bt:hover {
+      color:#3CC05B;
+            background-color:white;
+    }
+.lkbt {
+			text-decoration: underline;
+			text-transform: capitalize;
+			color: #666;;
+			font: 700 12px sans-serif;
+			border: none;
+            padding:4px 8px;
+            transition:all .1s ease-out;
+
+}
+.lkbt:hover {
+    text-decoration:none;
+    background-color:#666;
+    color:white;
+}
+.lblh {
+    font:bold 25px agency fb;
+    text-transform:capitalize;
+    color:#666;
+
+
+}
+
+.lblaside {
+    font:500 15px sans-serif;
+    text-transform:capitalize;
+    color:#777;
+}
+.lblasidebold {
+    font:bold 14px sans-serif;
+    text-transform:capitalize;
+    color:#777;
+}
+.booknow {
+
+			display: block;
+			background: white;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: #333;
+			border: none;
+			text-align: center;
+			padding: 20px;
+			width: 200px;
+			margin-bottom: 10px;
+			font: bold 20px agency fb;
+			border: 4px solid #333;
+			transition: background .3s ease-out, color .5s ease-in;
+		
+}
+		
+
+		.booknow::before {
+			content: "\2714";
+			
+		}
+        
+		.booknow:hover {
+			background-color: #333;
+			color: white;
+		}
+
+
+
+.lblhbr {
+    font:bold 25px agency fb;
+    text-transform:capitalize;
+    color:#ff4444;
+}
+
+.txtn {
+    border:1px solid #999;
+    width:200px;
+    height:25px;
+    padding-right:4px;
+    padding-left:3px;
+    color:#333;
+    text-transform:capitalize;
+}
+
+    .txtn:focus {
+    background:#f9f9f9;
+    color:#666;
+    }
+
+    
+.txtb {
+    border:1px solid #999;
+    width:500px;
+    height:25px;
+    padding-right:4px;
+    padding-left:3px;
+    color:#333;
+    text-transform:capitalize;
+}
+
+    .txtb:focus {
+    background:#f9f9f9;
+    color:#666;
+    }
+
+
+.txtvb {
+    border:1px solid #999;
+    width:500px;
+    height:150px;
+    padding-right:4px;
+    padding-left:3px;
+    color:#333;
+    text-transform:capitalize;
+}
+
+    .txtvb:focus {
+    background:#f9f9f9;
+    color:#666;
+    }
+
+
+    /*dropdown small*/
+.sls {
+    width:100px;
+    height:25px;
+    font:bold  13px sans-serif;
+    color:#666;
+    text-transform:capitalize;
+}
+.sls option {
+   
+    font:normal 12px sans-serif;
+    color:#666;
+    text-transform:capitalize;
+    padding-top:5px;
+    padding-right:5px;
+}
+
+      /*dropdown medium*/
+.slm {
+    width:130px;
+    height:25px;
+    font:bold  13px sans-serif;
+    color:#666;
+    text-transform:capitalize;
+}
+.slm option {
+   
+    font:normal 12px sans-serif;
+    color:#666;
+    text-transform:capitalize;
+    padding-top:5px;
+    padding-right:5px;
+}
+
+  

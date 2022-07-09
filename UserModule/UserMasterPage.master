@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMasterPage.master.cs" Inherits="UserModule_UserMasterPage" %>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
+    <link rel="icon" href="../global/pictures/tab_logo.png">
+    <link rel="stylesheet" type="text/css" href="../global/css/master_nav.css">
+    <link rel="stylesheet" type="text/css" href="../global/css/master_footer.css">
+    <link media="screen and (min-width:1220px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_1200.css" />
+    <link media="screen and (min-width:1120px) and (max-width: 1219px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_1100.css" />
+    <link media="screen and (min-width:1020px) and (max-width: 1119px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_1000.css" />
+    <link media="screen and (min-width:720px) and (max-width: 1019px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_700.css" />
+    <link media="screen and (min-width:520px) and (max-width: 719px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_500.css" />
+    <link media="screen and (min-width:100px) and (max-width: 519px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_mobile.css" />
+</head>
+<body>
+  
+        <div class="big_wrapper">
+            <div class="small_wrapper">
+                <div class="header_outter_wrapper">
+                    <div class="header_inner_wrapper">
+                        <div class="header_container">
+                            <div class="first_line">
+                                <div class="first_line_content_holder">
+                                    <div class="logo_container">
+                                        <a href="../GeneralModule/Default.aspx">
+                                            <img src="../global/pictures/logo.jpg" alt="shop online without any worry !">
+                                        </a>
+                                    </div>
+                                    <div class="top_cno_n_email">
+                                        <li><a href="#">special offers</a></li>
+                                        <li><a href="#">register as a dealer</a></li>
+                                        <li><a href="#">register as a user</a></li>
+                                        <li><a href="#">login</a></li>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second_line">
+                                <div class="second_line_content_holder">
+                                    <div class="anchor_holder">
+                                        <li class="first_li"><a href="#" class="first_li_anchor">Home</a></li>
+                                        <li class="first_li">
+                                            <a class="first_li_anchor  b_d_a">register</a>
+                                            <div class="dropdown medium_dropdown">
+                                                <div class="dropdown_content_holder">
+                                                    <a href="http://amarsinghcollege.ac.in/departments/department-of-botany/" class="dropdown_anchor">as a Dealer</a>
+                                                    <a href="http://amarsinghcollege.ac.in/departments/department-of-chemistry/" class="dropdown_anchor">as a User</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="first_li">
+                                            <a class="first_li_anchor  b_d_a">products</a>
+                                            <div class="dropdown more_than_small_dropdown">
+                                                <div class="dropdown_content_holder">
+                                                    <a href="http://elearning.ascollegelive.net/" class="dropdown_anchor">bajaj</a>
+                                                    <a href="http://admission.ascollegelive.net/" class="dropdown_anchor">hero honda</a>
+                                                    <a href="http://epayroll.ascollegelive.net/" class="dropdown_anchor">tvs city</a>
+                                                    <a href="http://epayroll.ascollegelive.net/" class="dropdown_anchor">svmsung</a>
+                                                    <a href="http://epayroll.ascollegelive.net/" class="dropdown_anchor">motorola</a>
+                                                    <a href="http://epayroll.ascollegelive.net/" class="dropdown_anchor">micromax</a>
+                                                    <a href="http://epayroll.ascollegelive.net/" class="dropdown_anchor">nokia</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="first_li">
+                                            <a class="first_li_anchor   b_d_a">services</a>
+                                            <div class="dropdown large_dropdown">
+                                                <div class="dropdown_content_holder">
+                                                    <a href="http://amarsinghcollege.ac.in/services/grievance-redressal-cell/" class="dropdown_anchor">greivence redresall cell</a>
+                                                    <a href="http://amarsinghcollege.ac.in/services/hostel/" class="dropdown_anchor">hostel</a>
+                                                    <a href="http://amarsinghcollege.ac.in/services/medical-services/" class="dropdown_anchor">medical services</a>
+                                                    <a href="http://amarsinghcollege.ac.in/services/national-cadet-cops/" class="dropdown_anchor">national cardet cops</a>
+                                                    <a href="http://amarsinghcollege.ac.in/services/national-service-scheme/" class="dropdown_anchor">national service scheme</a>
+                                                    <a href="http://amarsinghcollege.ac.in/services/welfare-scheme/" class="dropdown_anchor">welfare scheme</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="first_li"><a href="http://amarsinghcollege.ac.in/about-us/" class="first_li_anchor">sepcial offers</a></li>
+                                        <li class="first_li"><a href="http://amarsinghcollege.ac.in/about-us/" class="first_li_anchor">discounts</a></li>
+                                        <li class="first_li"><a href="http://amarsinghcollege.ac.in/about-us/" class="first_li_anchor">Login</a></li>
+                                        <li class="first_li"><a href="http://amarsinghcollege.ac.in/about-us/" class="first_li_anchor">about us</a></li>
+                                        <li class="first_li"><a href="http://amarsinghcollege.ac.in/contact-us/" class="first_li_anchor">contact us</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+  
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+.first_line {}
+
+.first_line_content_holder, .second_line_content_holder {
+    display: block;
+    width: 700px;
+}
+
+.first_li_anchor {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font: 500 11px caviar_Bold, Comfortaa;
+    padding: 14px 10px 14px 5px;
+    text-transform: capitalize;
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.b_d_a::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: transparent;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-left: none;
+    top: calc(50% - 2px);
+    margin-left: 2px;
+    transform-origin: center;
+    transform: rotateZ(45deg);
+    transition: all .2s ease-out;
+    opacity: 0;
+}
+
+
+/*ssssssssssssssssssssssssssssssssssss*/
+
+.level_1_footer_holder, .level_2_footer_holder, .level_3_footer_holder {
+    width: 700px;
+}
+
+.level_1_footer_holder .text_line {
+    font: bold 16px caviar_bold;
+}
+
+.container {
+    width: 180px;
+}
+
+.container a {
+    font-size: 12px;
+}
+
+.container:nth-of-type(1), .container:nth-of-type(2) {
+    display: none;
+}
+
+.social {
+    display: block;
+    width: 280px;
+    float: right;
+    margin-top: 20px;
+}
+
+.level_3_footer_holder .copyright_holder span {
+    font: normal 12px sans-serif;
+    font-family: caviar_bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.level_3_footer_holder .copyright_holder a {
+    font: bold 12px sans-serif;
+    font-family: caviar_bold;
+}
+
+
+}

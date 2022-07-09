@@ -1,0 +1,788 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DealerMasterPage.master.cs" Inherits="DealerModule_DealerMasterPage" %>
+       
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="../Resource/Template/js/lib/sweetalert/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Focus Admin Dashboard</title>
+
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+    <!-- Common -->
+    <link href="../Resource/Template/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="../Resource/Template/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="../Resource/Template/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="../Resource/Template/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="../Resource/Template/css/lib/helper.css" rel="stylesheet">
+    <link href="../Resource/Template/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <form runat="server">
+        <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+            <div class="nano">
+                <div class="nano-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <!-- <img src="../Resource/Template/images/logo.png" alt="" /> -->
+                            <span>Focus</span>
+                        </a>
+                    </div>
+                    <ul>
+                        <li class="label">Main</li>
+                        <li><a href="DealerHomePage.aspx"><i class="ti-calendar"></i>Home</a></li>
+                        <li><a href="./AddProduct.aspx"><i class="ti-calendar"></i>Add Product</a></li>
+                        <li><a href="./DealerViewBooking.aspx"><i class="ti-calendar"></i>View Bookings</a></li>
+                        <li><a href="./ViewStock.aspx"><i class="ti-calendar"></i>View Stock</a></li>
+                        <li><a href="./DealerIncreaseQuantity.aspx"><i class="ti-calendar"></i>Increase stock</a></li>
+                        <li><a href="./viewProduct.aspx"><i class="ti-calendar"></i>View Products</a></li>
+                        <li><a href="./UpdateProduct.aspx"><i class="ti-calendar"></i>Update Product</a></li>
+                        <li><a href="./RemoveProduct.aspx"><i class="ti-calendar"></i>Remove Product</a></li>
+                        <li><a href="./DealerDeleateAccount.aspx"><i class="ti-calendar"></i>Delete Account</a></li>
+                        <li><a href="./DealerChangePassword.aspx"><i class="ti-calendar"></i>Change Password</a></li>
+                        <li><a href="./DealerAboutUs.aspx"><i class="ti-calendar"></i>About US</a></li>
+                        <li><a href="./DealerContactUs.aspx"><i class="ti-calendar"></i>Contact US</a></li>
+
+                        <li>
+                            <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Logout</asp:LinkButton></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /# sidebar -->
+
+
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="float-left">
+                            <div class="hamburger sidebar-toggle">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <div class="dropdown dib">
+                                <div class="header-icon" data-toggle="dropdown">
+                                    <i class="ti-bell"></i>
+                                    <div class="drop-down dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-content-heading">
+                                            <span class="text-left">Recent Notifications</span>
+                                        </div>
+                                        <div class="dropdown-content-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <img class="pull-left m-r-10 avatar-img" src="../Resource/Template/images/avatar/3.jpg" alt="" />
+                                                        <div class="notification-content">
+                                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                            <div class="notification-heading">Uznain</div>
+                                                            <div class="notification-text">5 members joined today </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img class="pull-left m-r-10 avatar-img" src="../Resource/Template/images/avatar/3.jpg" alt="" />
+                                                        <div class="notification-content">
+                                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                            <div class="notification-heading">Mariam</div>
+                                                            <div class="notification-text">likes a photo of you</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img class="pull-left m-r-10 avatar-img" src="../Resource/Template/images/avatar/3.jpg" alt="" />
+                                                        <div class="notification-content">
+                                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                            <div class="notification-heading">Tasnim</div>
+                                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img class="pull-left m-r-10 avatar-img" src="../Resource/Template/images/avatar/3.jpg" alt="" />
+                                                        <div class="notification-content">
+                                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                            <div class="notification-heading">Uznain</div>
+                                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="text-center">
+                                                    <a href="#" class="more-link">See All</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown dib">
+                                <div class="header-icon" data-toggle="dropdown">
+                                    <i class="ti-email"></i>
+                                    <div class="drop-down dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-content-heading">
+                                            <span class="text-left">2 New Messages</span>
+                                            <a href="email.html">
+                                                <i class="ti-pencil-alt pull-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="dropdown-content-body">
+                                            <ul>
+                                                <li class="notification-unread">
+                                                    <a href="#">
+                                                        <img class="pull-left m-r-10 avatar-img" src="../Resource/Template/images/avatar/1.jpg" alt="" />
+                                                        <div class="notification-content">
+                                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                            <div class="notification-heading">Michael Qin</div>
+                                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="notification-unread">
+                                                    <a href="#">
+                                                        <img class="pull-left m-r-10 avatar-img" src="../Resource/Template/images/avatar/2.jpg" alt="" />
+                                                        <div class="notification-content">
+                                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                            <div class="notification-heading">Uznain</div>
+                                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img class="pull-left m-r-10 avatar-img" src="../Resource/Template/images/avatar/3.jpg" alt="" />
+                                                        <div class="notification-content">
+                                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                            <div class="notification-heading">Michael Qin</div>
+                                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img class="pull-left m-r-10 avatar-img" src="../Resource/Template/images/avatar/2.jpg" alt="" />
+                                                        <div class="notification-content">
+                                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                            <div class="notification-heading">Uznain</div>
+                                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="text-center">
+                                                    <a href="#" class="more-link">See All</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown dib">
+                                <div class="header-icon" data-toggle="dropdown">
+                                    <span class="user-avatar">Uznain Nazir
+                  <i class="ti-angle-down f-s-10"></i>
+                                    </span>
+                                    <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-content-heading">
+                                            <span class="text-left">Upgrade Now</span>
+                                            <p class="trial-day">30 Days Trail</p>
+                                        </div>
+                                        <div class="dropdown-content-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="ti-user"></i>
+                                                        <span>Profile</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="ti-email"></i>
+                                                        <span>Inbox</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="ti-settings"></i>
+                                                        <span>Setting</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="ti-lock"></i>
+                                                        <span>Lock Screen</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="ti-power-off"></i>
+                                                        <span>Logout</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="content-wrap">
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="main">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-8 p-r-0 title-margin-right">
+                                <div class="page-header">
+                                    <div class="page-title">
+                                        <h1>Hello,
+                  <span>Welcome Here</span>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /# column -->
+                            <div class="col-lg-4 p-l-0 title-margin-left">
+                                <div class="page-header">
+                                    <div class="page-title">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="#">Dashboard</a>
+                                            </li>
+                                            <li class="breadcrumb-item active">App-Profile</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /# column -->
+                        </div>
+                        <!-- /# row -->
+                        <section id="main-content">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="user-profile">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="user-photo m-b-30">
+                                                            <img class="img-fluid" src="../Resource/Template/images/user-profile.jpg" alt="" />
+                                                        </div>
+                                                        <div class="user-work">
+                                                            <h4>work</h4>
+                                                            <div class="work-content">
+                                                                <h3>It Solution </h3>
+                                                                <p>123, South Mugda</p>
+                                                                <p>New York, 1214</p>
+                                                            </div>
+                                                            <div class="work-content">
+                                                                <h3>Unix</h3>
+                                                                <p>123, South Mugda</p>
+                                                                <p>New York, 1214</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-skill">
+                                                            <h4>Skill</h4>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">Branding</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">UI/UX</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Web Design</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Wordpress</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Magento</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="user-profile-name">Uznain</div>
+                                                        <div class="user-Location">
+                                                            <i class="ti-location-pin"></i>New York, New York
+                                                        </div>
+                                                        <div class="user-job-title">Product Designer</div>
+                                                        <div class="ratings">
+                                                            <h4>Ratings</h4>
+                                                            <div class="rating-star">
+                                                                <span>8.9</span>
+                                                                <i class="ti-star color-primary"></i>
+                                                                <i class="ti-star color-primary"></i>
+                                                                <i class="ti-star color-primary"></i>
+                                                                <i class="ti-star color-primary"></i>
+                                                                <i class="ti-star"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-send-message">
+                                                            <button class="btn btn-primary btn-addon" type="button">
+                                                                <i class="ti-email"></i>Send Message</button>
+                                                        </div>
+                                                        <div class="custom-tab user-profile-tab">
+                                                            <ul class="nav nav-tabs" role="tablist">
+                                                                <li role="presentation" class="active">
+                                                                    <a href="#1" aria-controls="1" role="tab" data-toggle="tab">About</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content">
+                                                                <div role="tabpanel" class="tab-pane active" id="1">
+                                                                    <div class="contact-information">
+                                                                        <h4>Contact information</h4>
+                                                                        <div class="phone-content">
+                                                                            <span class="contact-title">Phone:</span>
+                                                                            <span class="phone-number">+8801629599859</span>
+                                                                        </div>
+                                                                        <div class="address-content">
+                                                                            <span class="contact-title">Address:</span>
+                                                                            <span class="mail-address">123, Rajar Goli, South Mugda</span>
+                                                                        </div>
+                                                                        <div class="email-content">
+                                                                            <span class="contact-title">Email:</span>
+                                                                            <span class="contact-email">hello@Admin Board.com</span>
+                                                                        </div>
+                                                                        <div class="website-content">
+                                                                            <span class="contact-title">Website:</span>
+                                                                            <span class="contact-website">www.Admin Board.com</span>
+                                                                        </div>
+                                                                        <div class="skype-content">
+                                                                            <span class="contact-title">Skype:</span>
+                                                                            <span class="contact-skype">Admin Board</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="basic-information">
+                                                                        <h4>Basic information</h4>
+                                                                        <div class="birthday-content">
+                                                                            <span class="contact-title">Birthday:</span>
+                                                                            <span class="birth-date">January 31, 1990 </span>
+                                                                        </div>
+                                                                        <div class="gender-content">
+                                                                            <span class="contact-title">Gender:</span>
+                                                                            <span class="gender">Male</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /# row -->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-title">
+                                            <h4>Recent Project </h4>
+
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover ">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>Status</th>
+                                                            <th>Date</th>
+                                                            <th>Price</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Kolor Tea Shirt For Man</td>
+                                                            <td>
+                                                                <span class="badge badge-primary">Ongoing</span>
+                                                            </td>
+                                                            <td>January 22</td>
+                                                            <td class="color-primary">$21.56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Kolor Tea Shirt For Women</td>
+                                                            <td>
+                                                                <span class="badge badge-success">Complete</span>
+                                                            </td>
+                                                            <td>January 30</td>
+                                                            <td class="color-success">$55.32</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Blue Backpack For Baby</td>
+                                                            <td>
+                                                                <span class="badge badge-danger">Rejected</span>
+                                                            </td>
+                                                            <td>January 25</td>
+                                                            <td class="color-danger">$14.85</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Kolor Tea Shirt For Man</td>
+                                                            <td>
+                                                                <span class="badge badge-primary">Ongoing</span>
+                                                            </td>
+                                                            <td>January 22</td>
+                                                            <td class="color-primary">$21.56</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Kolor Tea Shirt For Women</td>
+                                                            <td>
+                                                                <span class="badge badge-success">Complete</span>
+                                                            </td>
+                                                            <td>January 30</td>
+                                                            <td class="color-success">$55.32</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Blue Backpack For Baby</td>
+                                                            <td>
+                                                                <span class="badge badge-danger">Rejected</span>
+                                                            </td>
+                                                            <td>January 25</td>
+                                                            <td class="color-danger">$14.85</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /# column -->
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-title">
+                                            <h4>Recent Comments </h4>
+
+                                        </div>
+                                        <div class="recent-comment">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" src="../Resource/Template/images/avatar/1.jpg" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Uznain</h4>
+                                                    <p>Cras sit amet nibh libero, in gravida nulla. </p>
+                                                    <div class="comment-action">
+                                                        <div class="badge badge-success">Approved</div>
+                                                        <span class="m-l-10">
+                                                            <a href="#">
+                                                                <i class="ti-check color-success"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="ti-close color-danger"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa fa-reply color-primary"></i>
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                    <p class="comment-date">October 21, 2017</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" src="../Resource/Template/images/avatar/2.jpg" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Uznain</h4>
+                                                    <p>Cras sit amet nibh libero, in gravida nulla. </p>
+                                                    <div class="comment-action">
+                                                        <div class="badge badge-warning">Pending</div>
+                                                        <span class="m-l-10">
+                                                            <a href="#">
+                                                                <i class="ti-check color-success"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="ti-close color-danger"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa fa-reply color-primary"></i>
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                    <p class="comment-date">October 21, 2017</p>
+                                                </div>
+                                            </div>
+                                            <div class="media no-border">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" src="../Resource/Template/images/avatar/3.jpg" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Uznain</h4>
+                                                    <p>Cras sit amet nibh libero, in gravida nulla. </p>
+                                                    <div class="comment-action">
+                                                        <div class="badge badge-danger">Rejected</div>
+                                                        <span class="m-l-10">
+                                                            <a href="#">
+                                                                <i class="ti-check color-success"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="ti-close color-danger"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa fa-reply color-primary"></i>
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                    <div class="comment-date">October 21, 2017</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /# card -->
+                                </div>
+                                <!-- /# column -->
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="footer">
+                                        <p>
+                                            2018 © Admin Board. -
+                  <a href="#">example.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+
+
+    <!-- jquery vendor -->
+    <script src="../Resource/Template/js/lib/jquery.min.js"></script>
+    <script src="../Resource/Template/js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="../Resource/Template/js/lib/menubar/sidebar.js"></script>
+    <script src="../Resource/Template/js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+
+    <script src="../Resource/Template/js/lib/bootstrap.min.js"></script>
+    <script src="../Resource/Template/js/scripts.js"></script>
+    <!-- bootstrap -->
+
+    <script src="../Resource/Template/js/lib/calendar-2/moment.latest.min.js"></script>
+    <script src="../Resource/Template/js/lib/calendar-2/pignose.calendar.min.js"></script>
+    <script src="../Resource/Template/js/lib/calendar-2/pignose.init.js"></script>
+
+
+    <script src="../Resource/Template/js/lib/weather/jquery.simpleWeather.min.js"></script>
+    <script src="../Resource/Template/js/lib/weather/weather-init.js"></script>
+    <script src="../Resource/Template/js/lib/circle-progress/circle-progress.min.js"></script>
+    <script src="../Resource/Template/js/lib/circle-progress/circle-progress-init.js"></script>
+    <script src="../Resource/Template/js/lib/chartist/chartist.min.js"></script>
+    <script src="../Resource/Template/js/lib/sparklinechart/jquery.sparkline.min.js"></script>
+    <script src="../Resource/Template/js/lib/sparklinechart/sparkline.init.js"></script>
+    <script src="../Resource/Template/js/lib/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../Resource/Template/js/lib/owl-carousel/owl.carousel-init.js"></script>
+    <!-- scripit init-->
+    <script src="../Resource/Template/js/dashboard2.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+<%--<html>
+
+<head>
+    <link rel="stylesheet" href="../global/css/elements.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
+    <link rel="icon" href="../global/pictures/tab_logo.png">
+    <link rel="stylesheet" type="text/css" href="../global/css/master_nav.css">
+    <link rel="stylesheet" type="text/css" href="../global/css/master_footer.css">
+    <link rel="stylesheet" type="text/css" href="../global/css/master_footer.css">
+     <link rel="stylesheet" type="text/css" href="../css/Controls.css">
+    <link media="screen and (min-width:1220px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_1200.css" />
+    <link media="screen and (min-width:1120px) and (max-width: 1219px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_1100.css" />
+    <link media="screen and (min-width:1020px) and (max-width: 1119px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_1000.css" />
+    <link media="screen and (min-width:720px) and (max-width: 1019px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_700.css" />
+    <link media="screen and (min-width:520px) and (max-width: 719px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_500.css" />
+    <link media="screen and (min-width:100px) and (max-width: 519px) " rel="stylesheet" href="../global/css/master_config_nav_and_footer_for_mobile.css" />
+</head>
+<body>
+    <form runat="server">
+        <div class="big_wrapper">
+            <div class="small_wrapper">
+                <div class="header_outter_wrapper">
+                    <div class="header_inner_wrapper">
+                        <div class="header_container">
+                            <div class="first_line">
+                                <div class="first_line_content_holder">
+                                    <div class="logo_container">
+                                        <a href="../GeneralModule/Default.aspx">
+                                            <img src="../global/pictures/logo.jpg" alt="shop online without any worry !">
+                                        </a>
+                                    </div>
+                                    <div class="top_cno_n_email">
+                                        <li><a href="DealerSpecialOffers.aspx">special offers</a></li>
+                                        <li><a href="DealerAboutUs.aspx">about us</a></li>
+                                        <li><a href="DealerContactUs.aspx">contact us</a></li>
+                                        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Logout</asp:LinkButton>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second_line">
+                                <div class="second_line_content_holder">
+                                    <div class="anchor_holder">
+                                        <li class="first_li"><a href="DealerHomePage.aspx" class="first_li_anchor">Home</a></li>
+                                        <li class="first_li"><a href="AddProduct.aspx" class="first_li_anchor">Add Product</a></li>
+                                        <li class="first_li"><a href="viewProduct.aspx" class="first_li_anchor">View Product</a></li> 
+                                         <li class="first_li"><a href="ViewStock.aspx" class="first_li_anchor">View stock</a></li>
+                                         <li class="first_li"><a href="DealerViewBooking.aspx" class="first_li_anchor">View bookings</a></li>
+
+                                          <li class="first_li">
+                                            <a class="first_li_anchor  b_d_a">Options</a>
+                                            <div class="dropdown medium_dropdown">
+                                                <div class="dropdown_content_holder">
+                                                    <a href="UpdateProduct.aspx" class="dropdown_anchor">Update Product</a>
+                                                    <a href="RemoveProduct.aspx" class="dropdown_anchor">Remove Product</a>
+                                                    <a href="DealerIncreaseQuantity.aspx" class="dropdown_anchor">Increase stock</a>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                          <li class="first_li">
+                                            <a class="first_li_anchor  b_d_a">my Account</a>
+                                            <div class="dropdown medium_dropdown">
+                                                <div class="dropdown_content_holder">
+                                                      <a href="DealerProfile.aspx" class="dropdown_anchor">Profile</a>
+                                                    <a href="DealerChangePassword.aspx" class="dropdown_anchor">Change Password</a>
+                                                    <a href="DealerDeleateAccount.aspx" class="dropdown_anchor">Delete Account</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="first_li"><a href="DealerSearch.aspx" class="first_li_anchor">search</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>--%>
+<%-- <div class="footer_outer_wrapper">
+                <div class="footer_inner_wrapper">
+                    <div class="main_footer">
+                        <div class="level_1_footer">
+                            <div class="level_1_footer_holder">
+                                <li class="text_line">Sign up to our monthly newsletter and keep up-to-date with what's new in products  and much more ! </li>
+                                <div class="subscribe">
+                                    <div class="subscribe_holder">
+                                        <asp:TextBox ID="txtnewletter" placeholder=" Your email address..." spellcheck="false" runat="server" TextMode="Email"></asp:TextBox>
+                                        <%--  <input type="email" runat="server" placeholder=" Your email address..." spellcheck="false" \>--%>
+<%--  <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">subscribe me</asp:LinkButton>--%>
+<%--    <a href="#" target="_blank">subscribe me</a>--%>
+<%--  </div>
+                                </div>
+                            </div>
+                        </div>--%>
+<%-- <div class="level_2_footer">
+                            <div class="level_2_footer_holder">
+                       
+                          
+                                <div class="container">
+                                    <a href="DealerAboutUs.aspx">abouts us</a>
+                                    <a href="DealerContactUs.aspx">contact us</a>
+                                    <a href="DealerSearch.aspx">search</a>
+                                    <a href="DealerViewBooking.aspx">booking</a>
+                                </div>
+                                <div class="social">
+                                    <li class="heading">On The Web</li>
+                                    <div class="social_image_container">
+                                        <a href="https://www.facebook.com/AmarSinghCollegeJK" target="_blank"><img src="../global/pictures/facebook.png"/></a>
+                                        <a href="https://en.wikipedia.org/wiki/Amar_Singh_College" target="_blank"><img src="../global/pictures/wiki.png"></a>
+                                        <a href="https://www.youtube.com/channel/UC3EhoHH5aSpmx4aKOnFunhA" target="_blank"><img src="../global/pictures/youtube.png" \></a>
+                                    </div>
+                                    <li class="site_name">two wheeler catalog</li>
+                                    <li class="local_address">lal chowk, Srinagar</li>
+                                    <li class="state_and_country">J&amp;K, India </li>
+                                    <li class="pin">190008</li>
+                                    <li class="contact_no">0194-2310227</li>
+                                    <li class="mail_id"><a href="mailto:info@twowheeler.ac.i">info@twowheeler.ac.in</a></li>
+                                </div>
+                            </div>
+                        </div>--%>
+<%--  <div class="level_3_footer">
+                            <div class="level_3_footer_holder">
+                                <li class="copyright_holder">
+                                    <span>&copy; Copyright 2016 - two wheeler catalog. All rights reserved. For website information : </span>
+                                    <a href="../GeneralMdule/GeneralHomePage.aspx">www.twoweeler.ac.in</a>
+                                </li>
+                            </div>
+                        </div>--%>
+<%-- <div class="level_4_footer">
+                            <div class="level_4_footer_holder">
+                                <a class="wasit" href="https://www.facebook.com/Aijaz835@gmail.com">aijaz</a>
+
+                                <a class="basit" href="https://www.facebook.com/wasinazeer8@gmail.com">mudasir</a>
+                                <li class="meet">meet developers - </li>
+                                
+                            </div>
+                        </div>--%>
+<%--                    </div>
+                </div>
+            </div>
+  </form>
+</body>
+
+</html>
+--%>

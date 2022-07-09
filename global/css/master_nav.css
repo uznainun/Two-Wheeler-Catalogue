@@ -1,0 +1,488 @@
+@font-face {
+    font-family: caviar_Bold;
+    src: url(CaviarDreams_Bold.ttf);
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+#load_screen {
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#loading {
+    z-index: 999;
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    top: 45%;
+    top: calc(50% - 50px);
+    left: 45%;
+    left: calc(50% - 50px);
+}
+
+.first_line *::selection {
+    background-color: transparent;
+    color: dodgerblue;
+}
+
+.second_line *::selection {
+    background-color: transparent;
+    color: white;
+}
+
+.big_wrapper {
+    display: block;
+}
+
+.small_wrapper {}
+
+.header_outter_wrapper {
+    display: block;
+    margin: auto;
+    background-color: white;
+    overflow: visible;
+}
+
+.first_line, .second_line {
+    display: block;
+    border: none;
+}
+
+.header_container {
+    overflow: visible;
+}
+
+.first_line_content_holder, .second_line_content_holder {
+    display: block;
+    border: none;
+}
+
+.second_line {
+    background-color: dodgerblue;
+    overflow: visible;
+    margin: auto;
+}
+
+
+/*dddddddddddddddddddddddd*/
+
+.first_line {}
+
+.first_line_content_holder {
+    margin: auto;
+    overflow: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+.logo_container, .top_cno_n_email {
+    display: inline-block;
+}
+
+.logo_container {
+    float: left;
+}
+
+.logo_container img {
+    height: 50px;
+    width: auto;
+}
+
+.top_cno_n_email {
+    float: right;
+    height: 50px;
+    padding-to: 10px;
+}
+
+.top_cno_n_email .call, .top_cno_n_email .mail {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 20px;
+    border: 1px solid #f9f9f9;
+    border-radius: 4px;
+    font: 500 12px caviar_bold, segoe UI;
+    color: #999;
+    color: dodgerblue;
+    padding: 5px 20px 5px 35px;
+    box-shadow: 2px 3px 14px #eee;
+    transition: all .2s ease-out;
+    border: 1px solid #f9f9f9;
+}
+
+.top_cno_n_email .call::before, .top_cno_n_email .mail::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    width: 20px;
+    left: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.top_cno_n_email .call:before {
+    background-image: url('../pictures/0.png');
+}
+
+.top_cno_n_email .mail::before {
+    background-image: url('../pictures/00.png');
+}
+
+.top_cno_n_email .call:hover::before {
+    animation-name: for_call;
+    animation-duration: 1s;
+}
+
+@keyframes for_call {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    10% {
+        transform: rotateZ(20deg);
+    }
+    20% {
+        transform: rotateZ(-20deg);
+    }
+    30% {
+        transform: rotateZ(15deg);
+    }
+    40% {
+        transform: rotateZ(-15deg);
+    }
+    50% {
+        transform: rotateZ(10deg);
+    }
+    60% {
+        transform: rotateZ(-10deg);
+    }
+    70% {
+        transform: rotateZ(5deg);
+    }
+    80% {
+        transform: rotateZ(-5deg);
+    }
+    90% {
+        transform: rotateZ(3deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+.top_cno_n_email .mail:hover::before {
+    animation-name: for_mail;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes for_mail {
+    from {
+        transform: scale(1) rotateZ(0);
+    }
+    to {
+        transform: scale(1) rotateZ(2520deg);
+    }
+}
+
+
+/*dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+
+.second_line {
+    overflow: visible;
+}
+
+.second_line_content_holder {
+    overflow: visible;
+    margin: auto;
+    z-index: 999999999;
+    background-color: dodgerblue;
+    text-align: right;
+}
+
+.anchor_holder {
+    display: inline-block;
+    border: none;
+}
+
+.first_li {
+    position: relative;
+    border: none;
+    float: left;
+    display: inline-block;
+    overflow: visible;
+    transition: all .1s linear;
+}
+
+.first_li_anchor {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font: 500 14px segoe UI;
+    font-family: caviar_Bold, Comfortaa;
+    padding: 14px 25px 14px 15px;
+    text-transform: capitalize;
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.b_d_a::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-left: none;
+    top: calc(50% - 4px);
+    margin-left: 4px;
+    transform-origin: center;
+    transform: rotateZ(45deg);
+    transition: all .2s ease-out;
+    opacity: 0;
+}
+
+.first_li:hover {
+    background: #5b6064;
+}
+
+.first_li:hover .first_li_anchor {
+    color: white;
+}
+
+.first_li:hover .b_d_a::after {
+    border-right-color: white;
+    border-bottom-color: white;
+    transform: rotat(45deg);
+    opacity: 1
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    width: 150px;
+    overflow: auto;
+    background-color: transparent;
+    overflow: visible;
+    z-index: 9999;
+}
+
+.small_dropdown {
+    left: -20px;
+    width: 130px;
+}
+
+.more_than_small_dropdown {
+    left: -20px;
+    width: 180px;
+}
+
+.medium_dropdown {
+    left: -20px;
+    width: 220px;
+}
+
+.large_dropdown {
+    left: -20px;
+    width: 230px;
+}
+
+.first_li:hover .dropdown {
+    display: block;
+}
+
+.dropdown_content_holder {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: white;
+    margin-top: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 2px 3px 6px #ddd;
+}
+
+.dropdown_content_holder::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 20%;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: none;
+    border-bottom: none;
+    margin-bottom: -6px;
+    transform-origin: center;
+    transform: rotateZ(45deg);
+}
+
+.dropdown_anchor {
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin: auto;
+    color: #888;
+    text-transform: capitalize;
+    font: normal 12px sans-serif;
+    font: 500 14px caviar_bold, segoe UI Comfortaa;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    transition: all .1s ease-out
+}
+
+.dropdown_anchor:hover {
+    background-color: #5b6064;
+    color: white;
+    padding-left: 15px;
+}
+
+.share_this_on_outter {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.share_this_on_inner {
+    display: inline-block;
+    position: relative;
+}
+
+.share_this_on_actual {}
+
+.share_this_on_comment {
+    position: absolute;
+    font: bold 13px sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 200px;
+    top: calc(-100% + -10px);
+    left: calc(50% - 100px);
+    border-radius: 6px;
+    background: #4267b2;
+    color: white;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+
+.share_this_on_comment::before {
+    content: '';
+    position: absolute;
+    border-width: 10px 10px 0px 10px;
+    border-style: solid;
+    border-color: #4267b2 transparent transparent transparent;
+    left: calc(50% - 10px);
+    top: 100%;
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+
+.share_this_on_inner:hover .share_this_on_comment {
+    opacity: 1;
+}
+
+.share_this_on_inner:hover .share_this_on_comment::before {
+    opacity: 1;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+				
+	.top_cno_n_email{
+			display: block;
+			border: none;
+			width: auto;
+			overflow: hidden;
+            height:20px;
+            margin-top: 12px;
+			padding-left:20px;
+		}
+		
+		.top_cno_n_email li {
+			list-style: none;
+			display: inline-block;
+			float: left;
+            height:20px;
+		}
+		
+		.top_cno_n_email li a {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			color: #777;
+			padding-left:22px;
+            margin-right:8px;	
+            line-height: 20px;
+            vertical-align: middle;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: sans-serif;
+    top: 0px;
+    left: -16px;
+}
+
+		.top_cno_n_email li a::before {
+            content:' ';
+            position:absolute;
+            left:6px;
+            bottom: 20%;
+            width:13px;
+            height:13px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+		}
+
+            .top_cno_n_email li:nth-child(1) a::before {
+               background-image:url("../pictures/wifi.png");
+
+            }
+            
+            .top_cno_n_email li:nth-child(2) a::before {
+              background-image:url("../pictures/wrench.png");
+            }
+            .top_cno_n_email li:nth-child(3) a::before {
+              background-image:url("../pictures/xbox.png");
+
+            }
+            .top_cno_n_email li:nth-child(4) a::before {
+                    background-image:url("../pictures/user.png");
+
+            }
+		.top_cno_n_email li:not(:first-child) a {
+			border-left: 1px solid #999;
+		}
+		
+		.top_cno_n_email li a:hover {
+			text-decoration: underline;
+		}

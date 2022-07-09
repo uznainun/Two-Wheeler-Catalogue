@@ -1,0 +1,3 @@
+﻿------ Build started: Project: F:\...\Two Wheeler Catalog\, Configuration: Debug Any CPU ------
+Validating Web Site
+Building directory '/Two Wheeler Catalog/AdminModule/'.

@@ -1,0 +1,213 @@
+.left_aside_content_holder {}
+
+.search_holder {
+    background: white;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #ccc;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+.search_holder>li {
+    list-style-type: none;
+    color: white;
+    font: bold 12px Caviar_bold;
+    text-transform: capitalize;
+    background-color: dodgerblue;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    padding: 8 20px;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.search_holder ::-webkit-input-placeholder {
+    text-transform: none;
+}
+
+.search_holder>input[type="text"] {
+    box-sizing: border-box;
+    display: block;
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: none;
+    color: #666;
+    padding: 12px 3px 12px 10px;
+    box-shadow: 0px 0px 3px #ddd;
+    font: 400 12px segoe UI;
+    text-transform: capitalize;
+}
+
+.fb_div {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.heading_container {
+    display: block;
+    overflow: auto;
+    border-bottom: 4px solid #5b6064;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.heading_container:not(:first-of-type) {
+    margin-top: 30px;
+}
+
+.aside_heading {
+    display: inline-block;
+    background-color: #5b6064;
+    color: white;
+    float: left;
+    font: 500 15px caviar_bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 50px;
+    text-transform: uppercase;
+    overflow: auto;
+}
+
+.poster_container {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.poster_header {
+    box-shadow: 1px 2px 3px #999;
+    display: block;
+    transition: all .2s ease-out;
+}
+
+.poster_header:hover {
+    opacity: .7;
+}
+
+.poster_footer {
+    padding-top: 15px;
+    padding-right: 10px;
+    overflow: auto;
+}
+
+.poster_header>img {
+    width: 100%;
+}
+
+.poster_footer .date, .poster_footer .by, .poster_footer .name, .poster_footer .tag, .poster_footer .share {
+    display: inline-block;
+    border: none;
+    text-transform: capitalize;
+    border: none;
+}
+
+.poster_footer .date, .poster_footer .by, .poster_footer .name {
+    float: left;
+}
+
+.poster_footer .tag, .poster_footer .share {
+    float: right;
+}
+
+.poster_footer .date {
+    color: #888;
+    font: normal 10px sans-serif;
+    margin-left: 10px;
+}
+
+.poster_footer .by {
+    color: #555;
+    text-transform: uppercase;
+    font: normal 10px sans-serif;
+    margin-left: 5px;
+}
+
+.poster_footer .name {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    color: limegreen;
+    font: normal 11px sans-serif;
+    border: none;
+    padding: 0 3px;
+    overflow: visible;
+}
+
+.poster_footer .name:hover {
+    text-decoration: underline;
+}
+
+.poster_footer .tag, .poster_footer .share {
+    position: relative;
+    padding-left: 12px;
+    border: none;
+    color: #999;
+    font: normal 11px sans-serif;
+    text-decoration: none;
+}
+
+.poster_footer .share {
+    margin-left: 10px;
+}
+
+.poster_footer .tag:hover, .poster_footer .share:hover {
+    text-decoration: underline;
+}
+
+.poster_footer .tag::before {
+    content: '\f012';
+}
+
+.poster_footer .share::before {
+    content: '\f012';
+}
+
+.poster_footer .tag::before, .poster_footer .share::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .2s ease-out;
+}
+
+.poster_footer .tag:hover::before, .poster_footer .share:hover::before {
+    animation-name: spin;
+    animation-duration: .2s;
+    transition-timing-function: linear;
+    color: limegreen;
+}
+
+@keyframes spin {
+    from {
+        transform: translateY(0px)
+    }
+    50% {
+        transform: translateY(-6px)
+    }
+    to {
+        transform: translateY(0px)
+    }
+}
+
+.poster_caption {
+    display: block;
+    margin-top: 2px;
+}
+
+.poster_caption>a {
+    display: inline-block;
+    padding: 0;
+    color: #333;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 2px;
+    font: normal 12px segoe UI;
+    text-decoration: none;
+}
+
+.poster_caption>a:hover {
+    text-decoration: underline;
+}

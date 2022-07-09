@@ -1,0 +1,45 @@
+.first_line_content_holder, .second_line_content_holder {
+    width: 1000px;
+}
+
+.first_li_anchor {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font: 500 13px caviar_Bold, Comfortaa;
+    padding: 14px 25px 14px 15px;
+    text-transform: capitalize;
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.poster_container {
+    display: block;
+}
+
+
+/*dddddddddddddddddddddddddddddddddddddddddddddd*/
+
+.level_1_footer_holder, .level_2_footer_holder, .level_3_footer_holder {
+    width: 1000px;
+}
+
+.level_1_footer_holder .text_line {
+    font: bold 16px caviar_bold;
+}
+
+.container {
+    width: 180px;
+}
+
+.container a {
+    font-size: 12px;
+}
+
+.social {
+    display: block;
+    width: 260px;
+    float: right;
+    margin-top: 20px;
+}

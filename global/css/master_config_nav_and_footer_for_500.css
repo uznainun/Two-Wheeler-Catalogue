@@ -1,0 +1,142 @@
+.first_line_content_holder, .second_line_content_holder {
+    width: 500px;
+}
+
+.first_line {}
+
+.first_line_content_holder {
+    display: block;
+}
+
+.logo_container, .top_cno_n_email {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+.logo_container {}
+
+.logo_container img {
+    height: 50px;
+    width: auto;
+    float: left;
+}
+
+.top_cno_n_email {
+    overflow: auto;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.top_cno_n_email .call, .top_cno_n_email .mail {
+    float: right;
+}
+
+.top_cno_n_email .call {
+    margin-right: 10px;
+}
+
+.anchor_holder {
+    width: 450px;
+    margin: auto;
+    text-align: center;
+}
+
+.department_anchor {
+    font: 500 12px caviar_bold;
+    padding: 10px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.first_li_anchor:nth-of-type(1) {}
+
+.first_li_anchor {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font: 500 12px caviar_Bold, Comfortaa;
+    padding: 14px 20px 14px 10px;
+    text-transform: capitalize;
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.b_d_a::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: transparent;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-left: none;
+    top: calc(50% - 2px);
+    margin-left: 5px;
+    transform-origin: center;
+    transform: rotateZ(45deg);
+    transition: all .2s ease-out;
+    opacity: 0;
+}
+
+
+/*sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss*/
+
+.level_1_footer_holder, .level_2_footer_holder, .level_3_footer_holder {
+    width: 500px;
+}
+
+.level_1_footer_holder .text_line {
+    font: bold 16px caviar_bold;
+}
+
+.subscribe input[type="email"] {
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    font: 500 16px caviar_bold;
+    padding: 0 10px;
+    color: #5b6064;
+    float: left;
+    border: none
+}
+
+.container {
+    float: none;
+    display: inline-block;
+    width: 200px;
+}
+
+.container:nth-of-type(3) {
+    margin-right: 20px;
+}
+
+.container a {
+    font-size: 13px;
+}
+
+.container:nth-of-type(1), .container:nth-of-type(2), .container:nth-of-type(3) {
+    display: none;
+}
+
+.social {
+    float: right;
+    display: block;
+    width: 250px;
+    margin-top: 40px;
+}
+
+.level_3_footer_holder .copyright_holder span {
+    font: normal 10px sans-serif;
+    font-family: caviar_bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.level_3_footer_holder .copyright_holder a {
+    font: bold 10px sans-serif;
+    font-family: caviar_bold;
+    margin-bottom: 20px;
+}
